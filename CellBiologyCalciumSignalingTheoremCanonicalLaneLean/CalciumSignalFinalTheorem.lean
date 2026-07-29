@@ -1,0 +1,17 @@
+import canonicalLaneMathlib.AdmissibleClass
+import CellBiologyCalciumSignalingTheoremCanonicalLaneLean.CalciumSignalAdmissibleClass
+import CellBiologyCalciumSignalingTheoremCanonicalLaneLean.CalciumSignalBridge
+import CellBiologyCalciumSignalingTheoremCanonicalLaneLean.CalciumSignalGate
+
+namespace HautevilleHouse
+namespace CellBiologyCalciumSignalingTheoremCanonicalLaneLean
+
+def ConstrainedCalciumSignalClosure (A : CalciumSignalAdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_calcium_signal_endgame (A : CalciumSignalAdmissibleClass) :
+    ConstrainedCalciumSignalClosure A :=
+  And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end CellBiologyCalciumSignalingTheoremCanonicalLaneLean
+end HautevilleHouse
